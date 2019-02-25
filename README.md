@@ -40,7 +40,7 @@ chrome_url_overrides: This field allows you to specify parameters that allow you
 
 
 ##### Background Script
-“The background.js file is the extension’s event handler. It’s constantly listening for browser events, which you’ll feed to it using the Chrome Extension API. Google says that an effective background script is only loaded when it is needed and unloaded when it goes idle.<sup>4 ” You will need to tell the manifest.json file about the background script by adding: 
+“The background.js file is the extension’s event handler. It’s constantly listening for browser events, which you’ll feed to it using the Chrome Extension API. Google says that an effective background script is only loaded when it is needed and unloaded when it goes idle."<sup>4</sup> You will need to tell the manifest.json file about the background script by adding: 
 ```
 "background": {
   "scripts": ["background.js"]
