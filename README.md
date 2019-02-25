@@ -92,6 +92,6 @@ A button to enable
 
 <sup>1,2</sup>: https://blog.hartleybrody.com/chrome-extension/
 
-<sup>3</sup>, <sup>6</sup>: https://thoughtbot.com/blog/how-to-make-a-chrome-extension
+<sup>3,6</sup>: https://thoughtbot.com/blog/how-to-make-a-chrome-extension
 
-<sup>4</sup>, <sup>5</sup>: https://24ways.org/2018/my-first-chrome-extension/ 
+<sup>4,5</sup>: https://24ways.org/2018/my-first-chrome-extension/ 
