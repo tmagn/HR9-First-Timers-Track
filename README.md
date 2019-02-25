@@ -2,7 +2,7 @@
 
 ## Track Description
 
-We live in a world where everything is customized, from your Coffeehouse order to the technology you use. So why shouldn't your browser be too? Chrome extensions allow you to craft and tailor your ideal browsing experience in a few short lines of code. In this track, you'll learn how to build a Chrome extension from scratch using HTML/CSS and JavaScript. 
+We live in a world where everything is customized, from your phone case to your coffee order. So why shouldn't your browser be too? Chrome extensions allow you to craft and tailor your ideal browsing experience in a few short lines of code. In this track, you'll build a Chrome extension from scratch using HTML/CSS and JavaScript. 
 
 ## Introduction
 
