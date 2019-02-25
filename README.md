@@ -22,7 +22,7 @@ Browser Actions are permanently displayed to the right of the address bar. These
 Page Actions are only displayed on certain pages, and their icon appears inside the address bar. This is the right options for extensions that only operate on certain websites. Page Actions explicitly tell the user which websites they need permissions for.<sup>2</sup> Some examples use cases for page action extensions are subscribing to a page’s RSS feed or making a slideshow out of the page’s photos.
 
 ## BoilerPlates 
-If you would like a popup boilerplate, clone the <folder> folder. The directory looks like: <insert directory>
+If you would like a popup boilerplate, clone the <folder> folder. The directory looks like: boilerplate/HR8.5_New_Tab_Extension
   
 If you would like a new tab boilerplate, clone the <folder> folder. The directory looks like: <insert directory>
   
