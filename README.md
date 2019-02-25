@@ -17,8 +17,8 @@ All you'll need for this extension is Google Chrome and a basic text editor - We
 ## The Basics 
 
 There are two main ways Chrome Extensions appear in the browser’s UI - Browser Actions and Page Actions.
-“Browser Actions are permanently displayed to the right of the address bar. These are good if your extension can work on any website, or if the extension is website agnostic. This is probably the right option for most extensions.”sec<sup>1
-“Page Actions are only displayed on certain pages, and their icon appears inside the address bar. This is the right options for extensions that only operate on certain websites. Page Actions explicitly tell the user which websites they need permissions for.”sec<sup>2 Some examples use cases for page action extensions are subscribing to a page’s RSS feed or making a slideshow out of the page’s photos.
+“Browser Actions are permanently displayed to the right of the address bar. These are good if your extension can work on any website, or if the extension is website agnostic. This is probably the right option for most extensions.”sec<sup>1</sup>
+“Page Actions are only displayed on certain pages, and their icon appears inside the address bar. This is the right options for extensions that only operate on certain websites. Page Actions explicitly tell the user which websites they need permissions for.”sec<sup>2</sup> Some examples use cases for page action extensions are subscribing to a page’s RSS feed or making a slideshow out of the page’s photos.
 
 ## BoilerPlates 
 If you would like a popup boilerplate, clone the <folder> folder. The directory looks like: <insert directory>
@@ -27,7 +27,7 @@ If there is a different type of boilerplate you would like, see [Extensionizr](h
 
 ## Project Structure 
 ##### manifest.json 
-The manifest.json file “is a JSON file that basically tells Chrome what’s in the extension. It can include the name and version of the extension, as well as links to other files like icons and background pages”.sec<sup>3 A few of the important fields are:
+The manifest.json file “is a JSON file that basically tells Chrome what’s in the extension. It can include the name and version of the extension, as well as links to other files like icons and background pages”.sec<sup>3</sup> A few of the important fields are:
 permissions array: includes URL(s) that the extension needs access to 
 page_action or browser_action: contains information about the extension’s UI 
 default_icon is the icon that appears in the URL bar on specified websites 
@@ -44,10 +44,10 @@ chrome_url_overrides: This field allows you to specify parameters that allow you
 
 “The Popup is the little window that appears when you click on an extension’s icon in the Chrome Menu. It consists of markup and scripts, and you can tell the browser where to find it in the manifest.json under page_action: { "default_popup": FILE_NAME_HERE }.
 
-The Options page is exactly as it says. This displays customizable options only visible to the user when they either right-click on the Chrome menu and choose “Options” under an extension. This also consists of markup and scripts, and you can tell the browser where to find it in the manifest.json under options_page: FILE_NAME_HERE.” sec<sup>5
+The Options page is exactly as it says. This displays customizable options only visible to the user when they either right-click on the Chrome menu and choose “Options” under an extension. This also consists of markup and scripts, and you can tell the browser where to find it in the manifest.json under options_page: FILE_NAME_HERE.” sec<sup>5</sup>
 
 ##### Content Script 
-Content scripts are any scripts that will interact with any web windows or tabs that the user has open. These scripts will also interact with any tabs or windows opened by your extension.sec<sup>6 You will need to tell your manifest.json file about it by adding the following object: 
+Content scripts are any scripts that will interact with any web windows or tabs that the user has open. These scripts will also interact with any tabs or windows opened by your extension.sec<sup>6</sup> You will need to tell your manifest.json file about it by adding the following object: 
 "content_scripts": [
   {
     "matches": [ // You can specify which pages to match here
@@ -84,6 +84,6 @@ A button to enable
 [Google Provided Starter Examples](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/tutorials/) 
 
 
-sec<sup>1, sec<sup>2: https://blog.hartleybrody.com/chrome-extension/
-sec<sup>3, sec<sup>6: https://thoughtbot.com/blog/how-to-make-a-chrome-extension
-sec<sup>4, sec<sup>5: https://24ways.org/2018/my-first-chrome-extension/ 
+sec<sup>1</sup>, sec<sup>2</sup>: https://blog.hartleybrody.com/chrome-extension/
+sec<sup>3</sup>, sec<sup>6</sup>: https://thoughtbot.com/blog/how-to-make-a-chrome-extension
+sec<sup>4</sup>, sec<sup>5</sup>: https://24ways.org/2018/my-first-chrome-extension/ 
