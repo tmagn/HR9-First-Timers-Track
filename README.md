@@ -81,18 +81,25 @@ As you are coding, to update the extension, all you need to do is save the file,
 Chrome extensions allow for a variety of customization. A few popular examples include: 
 * [Momentum](https://chrome.google.com/webstore/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca?hl=en): A personalized, inspirational, to-do dashboard that appears in every new tab. 
 * [Dark Mode for Chrome](https://chrome.google.com/webstore/detail/dark-mode-for-chrome/geooakdjiamlhpechokegobmhdmlgidk?hl=en) 
-A button to enable 
+A button to enable dark mode while browsing.
+
+To help you get started, here are some more tutorials:
 * [Read Time Price Tracking Tutorial](https://scotch.io/tutorials/build-a-chrome-extension-for-real-time-price-tracking-with-appbase)
 * [Dashboard Tutorial](https://medium.com/javascript-in-plain-english/https-medium-com-javascript-in-plain-english-how-to-build-a-simple-chrome-extension-in-vanilla-javascript-e52b2994aeeb) 
 * [Dashboard Tutorial](https://medium.com/javascript-in-plain-english/https-medium-com-javascript-in-plain-english-how-to-build-a-simple-chrome-extension-in-vanilla-javascript-e52b2994aeeb) 
 * [jQuery Determiner Tutorial](https://www.thepolyglotdeveloper.com/2018/09/creating-basic-chrome-extension/)
 
 
+## Resources 
+* [Google Chrome Extension Documentation](https://developer.chrome.com/extensions/overview): This is a very comprehensive explanation of how Chrome extensions are built and the various functions extensions can have. You can look in [Google Provided Starter Examples](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/tutorials/) for the starter code used in the examples. 
+* [HTML Tutorial](https://html.com/): This tutorial covers the basics of HTML. 
+* [CSS Tutorial](https://html.com/css/): This tutorial covers the basics of CSS.
+* [Javascript Tutorial](https://www.htmldog.com/guides/javascript/): This simple and straightforward tutorial covers the basics of Javascript. Start by reading this [article](https://www.htmldog.com/guides/javascript/beginner/makingstuffhappen/) and then continue reading [here](https://www.htmldog.com/guides/javascript/intermediate/thedom/).
+* [The Modern Javascript Tutorial](https://javascript.info/): This in-depth tutorial thoroughly covers Javascript.
+
 ## FAQ
-[Google Chrome Extension Documentation](https://developer.chrome.com/extensions/overview): This is a very comprehensive explanation of how Chrome extensions are built and the various functions extensions can have.
 
-[Google Provided Starter Examples](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/tutorials/) 
-
+## Footnotes
 
 <sup>1,2</sup>: https://blog.hartleybrody.com/chrome-extension/
 
