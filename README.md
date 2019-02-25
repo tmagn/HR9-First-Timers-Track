@@ -34,7 +34,10 @@ default_icon is the icon that appears in the URL bar on specified websites
 default_popup is the HTML content that appears when the icon is clicked 
 chrome_url_overrides: This field allows you to specify parameters that allow your application can override default features in Chrome. For example, adding `"newtab": "override.html"` in your manifest.json file will force Chrome to display the override.html file instead of the default new tab. You can also modify bookmarks and history in a similar manner. 
 
-<img src="img/script_diagram.png" width="50%" class="technical-diagram img-rounded" alt="Relationship between the content and background scripts.">
+<p align="center">
+  <img src="img/script_diagram.png" width="50%" class="technical-diagram img-rounded" alt="Relationship between the content and background scripts.">
+</p>
+
 
 ##### Background Script
 “The background.js file is the extension’s event handler. It’s constantly listening for browser events, which you’ll feed to it using the Chrome Extension API. Google says that an effective background script is only loaded when it is needed and unloaded when it goes idle.<sup>4 ” You will need to tell the manifest.json file about the background script by adding: 
