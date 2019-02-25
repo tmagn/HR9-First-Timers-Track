@@ -90,6 +90,8 @@ A button to enable
 [Google Provided Starter Examples](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/tutorials/) 
 
 
-<sup>1</sup>, sec<sup>2</sup>: https://blog.hartleybrody.com/chrome-extension/
-<sup>3</sup>, sec<sup>6</sup>: https://thoughtbot.com/blog/how-to-make-a-chrome-extension
-<sup>4</sup>, sec<sup>5</sup>: https://24ways.org/2018/my-first-chrome-extension/ 
+<sup>1</sup>, <sup>2</sup>: https://blog.hartleybrody.com/chrome-extension/
+
+<sup>3</sup>, <sup>6</sup>: https://thoughtbot.com/blog/how-to-make-a-chrome-extension
+
+<sup>4</sup>, <sup>5</sup>: https://24ways.org/2018/my-first-chrome-extension/ 
