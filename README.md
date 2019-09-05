@@ -1,4 +1,4 @@
-# HR8.5-First-Timers-Track
+# HackRice 9 | First Timer's Track
 
 ## Track Description
 
