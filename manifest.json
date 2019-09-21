@@ -9,8 +9,8 @@
         "newtab": "src/newtab/newtab.html"
     },
     "icons": { "16": "src/popup/clarity_logo.png",
-        "48": "src/popup/cclarity_logo.png",
-       "128": "src/popup/cclarity_logo.png" },
+        "48": "src/popup/clarity_logo.png",
+       "128": "src/popup/clarity_logo.png" },
     "permissions": [
         "activeTab"
     ],
