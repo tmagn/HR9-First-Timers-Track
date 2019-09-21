@@ -71,7 +71,7 @@ function updatePrices() {
             continue;
 
         let newPrice = adjustPrice(price);
-        priceElement.innerText = priceToStrings(newPrice).text;
+        priceElement.innerText = priceToString(newPrice);
 
         tippy(priceElement, {
             content: tooltipText(price, newPrice),
@@ -83,6 +83,7 @@ function updatePrices() {
         }
     }
 
+    /*
     // price displayed on individual product page
     let productPriceElement = this.document.getElementById('priceblock_ourprice');
 
@@ -90,13 +91,15 @@ function updatePrices() {
         return;
 
     let price = parseNumber(productPriceElement.innerText);
+    console.log(price);
     let newPrice = this.adjustPrice(price);
     productPriceElement.innerText = priceToString(newPrice);
+    console.log(newPrice);
 
     tippy('#priceblock_ourprice', {
         content: tooltipText(price, newPrice),
         arrow: true
-    });
+    });*/
 }
 
 function doCheckout() {
