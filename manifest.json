@@ -8,6 +8,9 @@
     "chrome_url_overrides": {
         "newtab": "src/newtab/newtab.html"
     },
+    "icons": { "16": "src/popup/clarity_logo.png",
+        "48": "src/popup/clarity_logo.png",
+       "128": "src/popup/clarity_logo.png" },
     "permissions": [
         "activeTab",
         "storage"
@@ -15,8 +18,23 @@
     "content_scripts": [
         {
             "matches": ["https://*.amazon.com/*"],
-            "js": ["src/content/content.js"],
-            "run_at": "document_start"
+            "js": [
+                "src/content/popper.min.js",
+                "src/content/tippy.js",
+                "src/content/content.js"
+            ],
+            "run_at": "document_idle"
+        },
+        {
+            "matches": ["https://support.worldwildlife.org/*"],
+            "js": [
+                "src/content/wwf.js"
+            ],
+            "run_at": "document_idle"
         }
-    ]
+    ],
+    "background": {
+        "scripts": ["src/background/background.js"],
+        "persistent": false
+    }
 }
