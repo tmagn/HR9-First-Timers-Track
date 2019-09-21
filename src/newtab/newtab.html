@@ -21,7 +21,7 @@
 
         <!--Changes background on hover-->
         .tab button:hover {
-            background-color: rgb(156, 156, 156);
+            background-color: rgb(#ddd);
         }
 
         <!--Changes background on click-->
@@ -39,19 +39,20 @@
     </style>
 
     <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <title>Title</title>
     </head>
     <body>
         <!--Buttons for tab links-->
         <div class="tab">
-            <button class="tablinks" onclick="">Home</button>
-            <button class="tablinks" onclick="">Settings</button>
+            <button class="tablinks" id="hometab">Home</button>
+            <button class="tablinks" id="settingstab">Settings</button>
         </div>
     </body>
     
     <!--Home Page-->
-    <div id="Home" class="tabcontent">
-        
+    <div id="home" class="tabcontent">
+        <p>test</p>
     </div>
 
     <!--Settings Page-->
@@ -63,8 +64,7 @@
         font-size: 16px;
         border: none;
         cursor: pointer;
-}
-
+        }
     </style>
     <div id="Settings" class="tabcontent">
             <select class="dropbtn">
@@ -75,11 +75,7 @@
     </div>
 
     <!--Javascript-->
-    <script>
-        function openDropDown() {
-            document.getElementById("charitySelection").classList.toggle("show");
-        }
-    </script>
+    <script src="newtab.js"></script>
 </html>
 
 
