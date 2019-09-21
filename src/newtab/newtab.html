@@ -67,14 +67,18 @@
 
     </style>
     <div id="Settings" class="tabcontent">
-        <div class = "dropdown">
-            <button onclick="openDropDown()"
-            class="dropbtn">Pick your charity</button>
+            <select class="dropbtn">
+                <option>a</option>
+                <option>b</option>
+            </select>
         </div>
     </div>
 
     <!--Javascript-->
     <script>
+        function openDropDown() {
+            document.getElementById("charitySelection").classList.toggle("show");
+        }
     </script>
 </html>
 
