@@ -53,26 +53,27 @@
     <!--Home Page-->
     <div id="home" class="tabcontent">
         <!--Graph-->
-        <h2>Trends:</h2>
+        <h3>Trends:</h3>
         <hr>
         <!--Donations last month-->
-        <h2>Donations This Month:</h1>
+        <h3>Donations This Month:</h3>
         <hr>
         <!--Grand Total of Donations-->
-        <h2>Grand Total:</h2>
+        <h3>Grand Total:</h3>
         <hr>
     </div>
 
     <!--Settings Page-->
     <style>
         .dropbtn {
-        background-color: #f27405;
-        color: white;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
         padding: 12px;
         font-size: 16px;
         border: none;
         cursor: pointer;
         }
+        /*
         .submitbtn {
         background-color: #f27405;
         color: white;
@@ -80,20 +81,21 @@
         font-size: 16px;
         border: none;
         cursor: pointer;
-
         }
+        */
     </style>
     <div id="settings" class="tabcontent">
-    <h1>Pick your charity: </h1>
-            <select class="dropbtn">
-                <option>a</option>
-                <option>b</option>
-            </select>
-    <button class="submitbtn" id="Submit">Submit</button>
-        </div>
-
+        <h3>Pick your charity:</h3>
+                <select class="dropbtn" id="choose charity">
+                    <option value="WWF">WWF</option>
+                    <option value="Red Cross">Red Cross</option>
+                    <option value="Houston Food Bank">Houston Food Bank</option>
+                </select>
+        <hr>
         
+        <button type="button" class="btn btn-warning" id="Submit">Submit</button>
     </div>
+        
 
     <!--Javascript-->
     <script src="newtab.js"></script>
