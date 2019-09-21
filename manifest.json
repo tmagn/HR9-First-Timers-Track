@@ -8,7 +8,17 @@
     "chrome_url_overrides": {
         "newtab": "src/newtab/newtab.html"
     },
-    "icons": { "16": "clarity_logo.png",
-        "48": "clarity_logo.png",
-       "128": "clarity_logo.png" }
+    "icons": { "16": "src/popup/clarity_logo.png",
+        "48": "src/popup/cclarity_logo.png",
+       "128": "src/popup/cclarity_logo.png" },
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://*.amazon.com/*"],
+            "js": ["src/content/content.js"],
+            "run_at": "document_start"
+        }
+    ]
 }
