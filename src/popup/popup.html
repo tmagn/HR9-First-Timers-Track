@@ -1,5 +1,27 @@
+<!DOCTYPE html>
 <html>
-    <body>
-        popup
-    </body>
+<head>
+	<title>Comp Class</title>
+	<script src="popup.js"></script>
+	<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <h1>Company Name</h1>
+    <img src="clarity_logo.png" alt="Clarity Logo">
+    <!-- Rounded switch -->
+    <center>
+	<label class="switch">
+		<input type="checkbox">
+		<span class="slider round"></span>
+    </label>
+    </center>
+    <br>
+    <form action="/action_page.php">
+        <center>
+            <font size=5>%</font> <input type="number" name="percent_donating" class = "percent_box_style"><br>
+            <font size = 2>Additional percent of your purchase going to charity!</font>
+        </center>
+      </form>
+	<button id="checkPage">Donating to ____</button>
+</body>
 </html>

@@ -1,5 +1,90 @@
+<!DOCTYPE html>
 <html>
+    <!--CSS-->
+    <style>
+        body {font-family:Arial, Helvetica, sans-serif}
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1
+        }
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.5s;
+            font-size: 17px
+        }
+
+        /*Changes background on hover*/
+        .tab button:hover {
+            background-color: rgb(#ddd);
+        }
+
+        /*Changes background on click*/
+        .tab button.active {
+            background-color: #ccc
+        }
+
+        /*for each page*/
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+    </style>
+
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title>Title</title>
+    </head>
     <body>
-        newtab
+        <!--Buttons for tab links-->
+        <div class="tab">
+            <button class="tablinks" id="hometab">Home</button>
+            <button class="tablinks" id="settingstab">Settings</button>
+        </div>
     </body>
+    
+    <!--Home Page-->
+    <div id="home" class="tabcontent">
+        <!--Graph-->
+        <h2>Trends:</h2>
+        <hr>
+        <!--Donations last month-->
+        <h2>Donations This Month:</h1>
+        <hr>
+        <!--Grand Total of Donations-->
+        <h2>Grand Total:</h2>
+        <hr>
+    </div>
+
+    <!--Settings Page-->
+    <style>
+        .dropbtn {
+        background-color: #f27405;
+        color: white;
+        padding: 12px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        }
+    </style>
+    <div id="settings" class="tabcontent">
+    <h1>Pick your charity: </h1>
+            <select class="dropbtn">
+                <option>a</option>
+                <option>b</option>
+            </select>
+        </div>
+    </div>
+
+    <!--Javascript-->
+    <script src="newtab.js"></script>
 </html>
+
+
