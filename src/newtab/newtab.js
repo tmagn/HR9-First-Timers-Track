@@ -42,5 +42,7 @@ document.addEventListener('DOMContentLoaded', function(){
         settings.className += " active";
         }
     )
+    // begin the webpage on home
+    hometab.click();
     }
 )
