@@ -12,7 +12,8 @@
         "48": "src/popup/clarity_logo.png",
        "128": "src/popup/clarity_logo.png" },
     "permissions": [
-        "activeTab"
+        "activeTab",
+        "storage"
     ],
     "content_scripts": [
         {

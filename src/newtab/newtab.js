@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', function(){
     var hometab = document.getElementById("hometab");
     var settingstab = document.getElementById("settingstab");
+    var submitbttn = document.getElementById("Submit")
 
     // looks for click on home tab
     hometab.addEventListener('click', function(){
@@ -44,5 +45,11 @@ document.addEventListener('DOMContentLoaded', function(){
     )
     // begin the webpage on home
     hometab.click();
+    
+    // saves input into chrome.storage
+    submitbttn.addEventListener('click', function() {
+        chrome.storage.sync.set({percent:value})
+    }
+    )
     }
 )
