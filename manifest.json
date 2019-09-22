@@ -13,7 +13,8 @@
        "128": "src/popup/clarity_logo.png" },
     "permissions": [
         "activeTab",
-        "storage"
+        "storage",
+        "tabs"
     ],
     "content_scripts": [
         {
@@ -31,6 +32,17 @@
                 "src/content/wwf.js"
             ],
             "run_at": "document_idle"
+        },
+        {
+            "matches": ["https://secure.houstonfoodbank.org/*"],
+            "js": [
+                "src/content/hfb.js"
+            ],
+            "run_at": "document_idle"
         }
-    ]
+    ],
+    "background": {
+        "scripts": ["src/background/background.js"],
+        "persistent": false
+    }
 }

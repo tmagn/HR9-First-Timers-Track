@@ -128,6 +128,24 @@ function updatePrices(percent) {
     });*/
 }
 
+function donate(amount) {
+    chrome.storage.local.get(['charity'], function(result) {
+        let charity = result.charity;
+        if (charity === undefined) {
+            charity = 'WWF';
+        }
+
+        switch (charity) {
+            case 'WWF':
+                window.open('https://support.worldwildlife.org/site/SPageNavigator/donate_to_charity#amount=' + parseNumber(amount));
+                break;
+            case 'HFB':
+                window.open('https://secure3.convio.net/hfb/site/Donation2?df_id=8530&mfc_pref=T&8530.donation=form1#amount=' + parseNumber(amount));
+                break;
+        }
+    });
+}
+
 function doCheckout() {
     let checkoutButton = document.querySelector('#subtotals > div > div > div > .place-order-button');
     let checkoutButtonDiv = document.querySelector('#subtotals > div > div > div:first-child');
@@ -138,7 +156,7 @@ function doCheckout() {
     donateButton.style = 'padding: 0.5em';
     donateButton.classList.add('a-row');
     donateButton.onclick = function() {
-        window.open('https://support.worldwildlife.org/site/SPageNavigator/donate_to_charity#amount=' + parseNumber(totalDonation))
+        donate(totalDonation);
         checkoutButton.style.opacity = 1;
         checkoutButton.style.pointerEvents = 'all';
     };

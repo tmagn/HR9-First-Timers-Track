@@ -1,3 +1,8 @@
+chrome.runtime.onMessage.addListener(
+    function(request, sender, sendResponse) {
+      alert(request);
+    });
+
 // as soon as page is loaded (ie. DOMContentLoaded), look for events to happen with the tabs
 document.addEventListener('DOMContentLoaded', function(){
     var hometab = document.getElementById("hometab");
@@ -44,16 +49,26 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     )
     // begin the webpage on home
-    hometab.click();
+
+    chrome.storage.local.get(['tab'], function(result) {
+        if (result.tab === 'settings') {
+            settingstab.click();
+            chrome.storage.local.set({tab: ''});
+        } else {
+            hometab.click();
+        }
+    })
     
+    chrome.storage.local.get(['percent', 'charity'], function(result) {
+        document.getElementById('choose_percent').value = result.percent;
+        document.getElementById('choose_charity').value = result.charity;
+    });
+
     // saves input into chrome.storage
     submitbttn.addEventListener('click', function() {
-        var charity = document.getElementById('choose charity').value;
-        var percent = document.getElementById('choose percent').value / 100;
-        chrome.storage.sync.set({"charity":charity, "percent":percent});
-        console.log(charity)
-        console.log(percent)
-    }
-    )
-    }
-)
+        let charity = document.getElementById('choose_charity').value;
+        chrome.storage.local.set({charity: charity});
+        let percent = document.getElementById('choose_percent').value;
+        chrome.storage.local.set({percent: percent});
+    });
+});
