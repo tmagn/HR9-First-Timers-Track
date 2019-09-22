@@ -32,9 +32,5 @@
             ],
             "run_at": "document_idle"
         }
-    ],
-    "background": {
-        "scripts": ["src/background/background.js"],
-        "persistent": false
-    }
+    ]
 }
