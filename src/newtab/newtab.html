@@ -1,5 +1,44 @@
 <!DOCTYPE html>
 <html>
+    <!--CSS-->
+    <style>
+        body {font-family:Arial, Helvetica, sans-serif}
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #038c73
+        }
+        .tab button {
+            background-color: inherit;
+            float: left;
+            color:rgb(255, 255, 255);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.5s;
+            font-size: 17px
+        }
+
+        /*Changes background on hover*/
+        .tab button:hover {
+            background-color: rgb(#ddd);
+        }
+
+        /*Changes background on click*/
+        .tab button.active {
+            background-color: rgb(187, 83, 83)
+        }
+
+        /*for each page*/
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+    </style>
+
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <title>Title</title>
@@ -48,15 +87,32 @@
         */
     </style>
     <div id="settings" class="tabcontent">
-        <h3>Pick your charity:</h3>
+        <h3>Charity:</h3>
+        <hr>
                 <select class="dropbtn" id="choose charity">
                     <option value="WWF">WWF</option>
                     <option value="Red Cross">Red Cross</option>
                     <option value="Houston Food Bank">Houston Food Bank</option>
                 </select>
         <hr>
-        
-        <button type="button" class="btn btn-warning" id="Submit">Submit</button>
+        <h3>Percent donation</h3>
+        <hr>
+                <select class="dropbtn" id="choose percent">
+                    <option value="1">1%</option>
+                    <option value="5">5%</option>
+                    <option value="10">10%</option>
+                    <option value="20">20%</option>
+                    <option value="30">30%</option>
+                    <option value="40">40%</option>
+                    <option value="50">50%</option>
+                    <option value="60">60%</option>
+                    <option value="70">70%</option>
+                    <option value="80">80%</option>
+                    <option value="90">90%</option>
+                    <option value="100">100%</option>
+                </select>
+                <hr>
+        <button type="button" class="btn btn-warning" id="Submit">Update</button>
     </div>
         
 
