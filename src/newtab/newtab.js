@@ -1,3 +1,21 @@
+let chart;
+
+function priceToStrings(price) {
+    let whole = Math.floor(price);
+    let fraction = Math.floor(100 * (price - whole)).toString().padStart(2, '0');
+    let text = '$' + whole.toLocaleString() + '.' + fraction;
+
+    return {
+        whole: whole,
+        fraction: fraction,
+        text: text
+    }
+}
+
+function priceToString(price) {
+    return priceToStrings(price).text;
+}
+
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
       alert(request);
@@ -59,9 +77,26 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     })
     
-    chrome.storage.local.get(['percent', 'charity'], function(result) {
+    chrome.storage.local.get(['percent', 'charity', 'months'], function(result) {
         document.getElementById('choose_percent').value = result.percent;
         document.getElementById('choose_charity').value = result.charity;
+
+        let date = new Date();
+        let key = date.getYear() + '-' + date.getMonth();
+        let month = 0;
+
+        if (key in result.months) {
+            month = result.months[key];
+        }
+        month = priceToString(month);
+
+        document.getElementById('month').innerText = 'Donations This Month: ' + month;
+
+        let total = 0;
+        for (value of Object.values(result.months)) {
+            total += parseFloat(value);
+        }
+        document.getElementById('total').innerText = 'Grand Total: ' + priceToString(total);
     });
 
     // saves input into chrome.storage
@@ -72,3 +107,28 @@ document.addEventListener('DOMContentLoaded', function(){
         chrome.storage.local.set({percent: percent});
     });
 });
+
+window.onload = () => {
+    chrome.storage.local.get('months', function(result) {
+
+        let dataPoints = [];
+        for (value of Object.values(result.months)) {
+            dataPoints.push({y: value});
+        }
+
+    window.setTimeout(() => {
+     chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        theme: "light2",
+        axisY:{
+            includeZero: false
+        },
+        data: [{        
+            type: "line",       
+            dataPoints: dataPoints
+        }]
+    });
+    chart.render();
+    }, 100);
+});
+};

@@ -129,7 +129,7 @@ function updatePrices(percent) {
 }
 
 function donate(amount) {
-    chrome.storage.local.get(['charity'], function(result) {
+    chrome.storage.local.get(['charity', 'months'], function(result) {
         let charity = result.charity;
         if (charity === undefined) {
             charity = 'WWF';
@@ -143,6 +143,16 @@ function donate(amount) {
                 window.open('https://secure3.convio.net/hfb/site/Donation2?df_id=8530&mfc_pref=T&8530.donation=form1#amount=' + parseNumber(amount));
                 break;
         }
+
+        let date = new Date();
+        let key = date.getYear() + '-' + date.getMonth();
+
+        if (!(key in result.months)) {
+            result.months[key] = 0;
+        }
+        result.months[key] += parseNumber(amount);
+
+        chrome.storage.local.set({months: result.months});
     });
 }
 

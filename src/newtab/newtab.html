@@ -54,14 +54,14 @@
     <!--Home Page-->
     <div id="home" class="tabcontent">
         <!--Graph-->
-        <h3>Trends:</h3>
-        <hr>
         <!--Donations last month-->
-        <h3>Donations This Month:</h3>
+        <h3 id="month">Donations This Month:</h3>
         <hr>
         <!--Grand Total of Donations-->
-        <h3>Grand Total:</h3>
+        <h3 id="total">Grand Total:</h3>
         <hr>
+        <h3>Donations By Month:</h3>
+        <div id="chartContainer" style="height: 300px"></div>
     </div>
 
     <!--Settings Page-->
@@ -130,6 +130,7 @@
         
 
     <!--Javascript-->
+    <script src="canvasjs.min.js"></script>
     <script src="newtab.js"></script>
 </html>
 

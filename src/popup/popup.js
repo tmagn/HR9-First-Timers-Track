@@ -1,3 +1,19 @@
+function priceToStrings(price) {
+    let whole = Math.floor(price);
+    let fraction = Math.floor(100 * (price - whole)).toString().padStart(2, '0');
+    let text = '$' + whole.toLocaleString() + '.' + fraction;
+
+    return {
+        whole: whole,
+        fraction: fraction,
+        text: text
+    }
+}
+
+function priceToString(price) {
+    return priceToStrings(price).text;
+}
+
 window.onload = function() {
     let toggle = document.getElementById('toggle');
 
@@ -13,7 +29,7 @@ window.onload = function() {
 
     let percent = document.getElementById('percent');
 
-    chrome.storage.local.get(['percent', 'charity'], function(result) {
+    chrome.storage.local.get(['percent', 'charity', 'months'], function(result) {
         percent.value = result.percent;
 
         percent.onkeypress = function(event) {
@@ -30,6 +46,23 @@ window.onload = function() {
         }
 
         document.getElementById('charity').innerText = 'Donating to ' + charity;
+
+        let date = new Date();
+        let key = date.getYear() + '-' + date.getMonth();
+        let month = 0;
+
+        if (key in result.months) {
+            month = result.months[key];
+        }
+        month = priceToString(month);
+
+        document.getElementById('month').innerText = '' + month + ' donated this month';
+
+        let total = 0;
+        for (value of Object.values(result.months)) {
+            total += parseFloat(value);
+        }
+        document.getElementById('total').innerText = '' + priceToString(total) + ' donated since you joined!';
     });
 
     document.getElementById("settings").onclick = function() {
