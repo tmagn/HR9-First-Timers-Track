@@ -158,6 +158,10 @@ function donate(amount) {
 
 function doCheckout() {
     let checkoutButton = document.querySelector('#subtotals > div > div > div > .place-order-button');
+
+    if (checkoutButton === null)
+        return;
+
     let checkoutButtonDiv = document.querySelector('#subtotals > div > div > div:first-child');
     let buttonsDiv = document.querySelector('#subtotals > div > div:first-child');
     donateButton = document.createElement('button');
