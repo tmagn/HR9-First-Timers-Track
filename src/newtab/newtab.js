@@ -48,7 +48,11 @@ document.addEventListener('DOMContentLoaded', function(){
     
     // saves input into chrome.storage
     submitbttn.addEventListener('click', function() {
-        chrome.storage.sync.set({percent:value})
+        var charity = document.getElementById('choose charity').value;
+        var percent = document.getElementById('choose percent').value / 100;
+        chrome.storage.sync.set({"charity":charity, "percent":percent});
+        console.log(charity)
+        console.log(percent)
     }
     )
     }
